@@ -9,20 +9,20 @@ $destino = "c:\Users\we061201\OneDrive - COMERC ENERGIA\Backup\Site\dados_dashbo
 
 if (Test-Path $origem) {
     Copy-Item -Path $origem -Destination $destino -Force
-    Write-Host "✓ Arquivo copiado com sucesso!" -ForegroundColor Green
+    Write-Host "[OK] Arquivo copiado com sucesso!" -ForegroundColor Green
 } else {
-    Write-Host "✗ Arquivo não encontrado em: $origem" -ForegroundColor Red
+    Write-Host "[ERRO] Arquivo nao encontrado em: $origem" -ForegroundColor Red
     exit 1
 }
 
 # 2. Navegar para a pasta do site
-Write-Host "Atualizando repositório Git..." -ForegroundColor Yellow
+Write-Host "Atualizando repositorio Git..." -ForegroundColor Yellow
 Set-Location "c:\Users\we061201\OneDrive - COMERC ENERGIA\Backup\Site"
 
 # 3. Git add, commit e push
 git add .
-git commit -m "Atualização automática do dashboard"
+git commit -m "Atualizacao automatica do dashboard"
 git push
 
-Write-Host "✓ Site atualizado com sucesso!" -ForegroundColor Green
+Write-Host "[OK] Site atualizado com sucesso!" -ForegroundColor Green
 Write-Host "Acesse: https://wellemiliano.github.io/dashboard-pedidos-de-compras" -ForegroundColor Cyan
