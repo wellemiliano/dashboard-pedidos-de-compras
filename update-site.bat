@@ -9,7 +9,7 @@ echo.
 
 REM 1. Copiar arquivo dados_dashboard.js
 echo Copiando dados_dashboard.js...
-set origem=c:\Users\we061201\OneDrive - COMERC ENERGIA\Mori Energia - BIs\dados_dashboard.js
+set origem=C:\Users\we061201\OneDrive - COMERC ENERGIA\Mori Energia - REPOSITORIO DE PAGAMENTOS ENGENHARIA\BIs\dados_dashboard.js
 set destino=c:\Users\we061201\OneDrive - COMERC ENERGIA\Backup\Site\dados_dashboard.js
 
 if exist "%origem%" (
